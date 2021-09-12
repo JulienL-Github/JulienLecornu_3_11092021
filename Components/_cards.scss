@@ -1,0 +1,9 @@
+.fon__card {
+    display: flex;
+    align-items: center;
+    @include box-shadow;
+    padding: $padding-fon__card;
+    background-color: $color-grey-dark;
+    border-radius: 30px;
+    margin:$margin-fon__card;
+}
