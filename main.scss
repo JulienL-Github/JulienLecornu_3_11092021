@@ -1,0 +1,53 @@
+/* COLORS */
+    $color-primary:#9356DC ;
+    $color-secondary:#FF79DA;
+    $color-tertiary:#99E2D0;
+    $color-white:#ffff;
+    $color-black: #000000;
+    $color-black-light:#353535;
+    $color-grey-light:#f6f6f6;
+    $color-grey-dark:#eaeaea;
+
+@mixin box-shadow {
+    box-shadow: 0 5px 5px #a6adc933 ;
+    
+}
+/* WIDTH */
+    $width-site:100%;
+
+
+/* PADDING */
+    $padding-site: 50px 23px 50px 23px;
+    $padding-logo: 0 0 0 0;
+    $padding-footer: 0 0 0 0;
+
+
+body {
+    margin:0;
+    background-color: $color-grey-dark;
+    font-size: 16px;
+}
+
+header {
+    background-color: $color-white;
+    height: 64px;
+    width: $width-site;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include box-shadow;
+    padding-top:9px
+}
+
+#loc {
+    height: 50px;
+    width: $width-site;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        margin:0 18px 0 0px;
+        color: $color-black-light;
+        font-size: 1em;
+    }
+}

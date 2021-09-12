@@ -1,0 +1,47 @@
+/* COLORS */
+/* WIDTH */
+/* PADDING */
+body {
+  margin: 0;
+  background-color: #eaeaea;
+  font-size: 16px;
+}
+
+header {
+  background-color: #ffff;
+  height: 64px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 5px 5px #a6adc933;
+          box-shadow: 0 5px 5px #a6adc933;
+  padding-top: 9px;
+}
+
+#loc {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loc i {
+  margin: 0 18px 0 0px;
+  color: #353535;
+  font-size: 1em;
+}
+/*# sourceMappingURL=main.css.map */
