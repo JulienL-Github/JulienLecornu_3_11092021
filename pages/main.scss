@@ -1,0 +1,87 @@
+@import 'utils/_variables.scss';
+@import 'utils/_mixins.scss';
+@import 'base/_fonts.scss';
+@import 'base/box-sizing';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'sections/body.scss';
+@import 'sections/footer.scss';
+@import 'sections/header-home.scss';
+
+
+#loc {
+    padding: $padding-loc;
+    @include flex-center-center;
+    i {
+        margin:0 18px 0 0px;
+        color: $color-black-light;
+        font-size: 1em;
+    }
+}
+
+#exp {
+    @include flex-center-center;
+    flex-direction: column;
+    background-color: $color-grey-light;
+    padding: $padding-exp;
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        margin-top: 22px;
+        text-align: center;        
+    }
+
+    button {
+        margin-top: 32px;
+    }
+}
+
+#fon {
+    padding: $padding-site;
+    background-color: $color-white;
+    @include flex-center-center;
+    flex-direction: column;
+
+    .nb {
+        @include flex-center-center;
+        background-color: $color-primary;
+        height: 24px;
+        width: 24px;
+        border-radius: 50px;
+        color: $color-white;
+        margin-right: 22px;
+        margin-left: -10px;
+    }
+
+    i {
+        margin-right: 22px;
+    }
+}
+
+#res{
+    padding: $padding-site;
+    background-color: $color-grey-light;
+    @include flex-center-center;
+
+    
+    .container {
+        display:flex;
+        flex-wrap: wrap;
+        max-width: 1080px;
+        width: 100%;
+        justify-content: center;
+        h2 {
+            width: 100%;
+    
+        }
+    }
+
+
+}
+
+
+
+
+

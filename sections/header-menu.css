@@ -1,0 +1,34 @@
+/* COLORS */
+header {
+  position: relative;
+  background-color: #ffff;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 9px;
+}
+
+header a {
+  position: absolute;
+  width: 18px;
+  margin-right: 293px;
+  rotate: 180deg;
+  -webkit-filter: opacity(40%);
+          filter: opacity(40%);
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+header a:hover {
+  -webkit-filter: opacity(100%);
+          filter: opacity(100%);
+  width: 23px;
+}
+/*# sourceMappingURL=header-menu.css.map */

@@ -1,0 +1,8 @@
+header {
+    position: relative;
+    background-color: $color-white;
+    height: 64px;
+    @include flex-center-center;
+    @include box-shadow;
+    padding-top:9px;
+}

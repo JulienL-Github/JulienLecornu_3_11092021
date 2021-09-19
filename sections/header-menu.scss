@@ -1,0 +1,24 @@
+@import '../utils/_variables.scss';
+@import '../utils/_mixins.scss';
+
+
+header {
+    position: relative;
+    background-color: $color-white;
+    height: 64px;
+    @include flex-center-center;
+    padding-top:9px;
+    a {
+        position: absolute;
+        width: 18px;
+        margin-right: 293px;
+        rotate: 180deg;
+        filter : opacity(40%);
+        transition: 150ms;
+        &:hover {
+            filter : opacity(100%);
+            width: 23px;
+        }
+
+    }
+}
