@@ -8,7 +8,35 @@
     font-family: 'Roboto';
     font-size: 1.125em;
     font-weight: 500;
+    transition: 300ms;
     &:hover{
         cursor: pointer;
+        filter: brightness(115%);
+        box-shadow: 0 10px 10px #9b9b9b;
+        
+    }
+}
+
+
+/* LIKE BUTTON : HEART */
+.res__card--like {
+    width: 40px;
+    height: 40px;
+
+    #gradient-vertical {
+        --color-stop-1: #{$color-secondary};
+        --color-stop-2: #{$color-primary};
+        }
+        
+    g {
+        fill:transparent;
+        stroke:  black;
+        stroke-width: 400;
+        transition: 150ms;
+        &:hover {
+            fill: url(#gradient-vertical);
+            stroke:  transparent;
+            cursor: pointer;
+        }
     }
 }
