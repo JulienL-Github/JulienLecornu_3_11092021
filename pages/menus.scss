@@ -59,6 +59,8 @@
         }
     }
 
+
+
     .menu__cards {
         @include box-shadow;
         background-color: $color-white;
@@ -69,6 +71,27 @@
         width: 100%;
         overflow: hidden;
         margin-bottom: 14px;
+        opacity: 0;
+
+        @for $i from 2 to 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: .5s * ($i - 2);
+            }
+        }
+    
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-name: slideup;
+        @keyframes slideup {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
         .comp {
             padding: 15px 20px;
@@ -104,11 +127,11 @@
             @include flex-center-center;
             width: 0px;
             background-color: $color-tertiary;
-            transition: 1s;
+            transition: .5s;
             position: relative;
             svg {
                 fill: $color-white;
-                transition: 1s;
+                transition: .75s;
             }
         }
 

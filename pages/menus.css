@@ -352,6 +352,54 @@ header a:hover {
   width: 100%;
   overflow: hidden;
   margin-bottom: 14px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slideup;
+          animation-name: slideup;
+}
+
+.menu__cards:nth-child(2) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.menu__cards:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.menu__cards:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .menu__cards .comp {
@@ -398,15 +446,15 @@ header a:hover {
           align-items: center;
   width: 0px;
   background-color: #99E2D0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
   position: relative;
 }
 
 .menu__cards .btn--add svg {
   fill: #ffff;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .75s;
+  transition: .75s;
 }
 
 .menu__cards:hover .btn--add {
