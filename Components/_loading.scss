@@ -1,0 +1,68 @@
+#loading {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*Animation Settings*/ 
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: loading;
+    animation-delay: 2.9s ;
+
+    @keyframes loading {
+        0% {
+          opacity: 1;
+          z-index: 2;
+        }
+        100% {
+          opacity: 0;
+          z-index: -3;
+        }
+    }
+
+    .load__container {
+      display: flex;
+      margin-bottom: 20px;
+      }
+
+    }
+
+    .load__square {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px 0 10px;
+      border-radius: 15px;
+      animation: load__square 1s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate;
+      animation-fill-mode: forwards;
+
+
+      @for $i from 1 to 5 {
+        &:nth-child(#{$i}){
+        animation-delay: 0.25s * ($i - 3);
+      }
+
+      &:nth-child(1){
+        background-color: $color-primary;
+      }
+      &:nth-child(2){
+        background-color: $color-secondary;
+      }
+      &:nth-child(3){
+        background-color: $color-tertiary;
+      }
+    }
+      @keyframes load__square {
+        0% {
+          transform: rotate(0deg) scale(0);
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+        }   
+    }
+  }

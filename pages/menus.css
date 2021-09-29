@@ -132,6 +132,113 @@
   color: black;
 }
 
+.menu__cards {
+  -webkit-box-shadow: 0 5px 5px #bdbdbd;
+          box-shadow: 0 5px 5px #bdbdbd;
+  background-color: #ffff;
+  border-radius: 25px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slideup;
+          animation-name: slideup;
+}
+
+.menu__cards:nth-child(1) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.menu__cards:nth-child(2) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.menu__cards:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.menu__cards:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu__cards:nth-child(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu__cards .comp {
+  padding: 15px 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu__cards .comp h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu__cards .comp .detail_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__cards .comp .detail_price .detail {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 40px);
+}
+
+.menu__cards .comp .detail_price .price {
+  font-weight: 700;
+}
+
 body {
   margin: 0;
   background-color: #eaeaea;
@@ -274,9 +381,21 @@ header a:hover {
   width: 23px;
 }
 
+body {
+  background-color: #f6f6f6;
+}
+
+.max-width {
+  max-width: 1080px;
+  margin: auto;
+}
+
 #res-ill {
   width: 100%;
   position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   z-index: -10;
 }
 
@@ -289,7 +408,7 @@ header a:hover {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  max-height: 500px;
+  /*object-position: 50% 150%;*/
 }
 
 #res-container {
@@ -318,11 +437,12 @@ header a:hover {
 /* MENU */
 .menu__container {
   padding-bottom: 45px;
+  width: calc(100% - 40px);
+  margin: auto;
 }
 
 .list-menu {
   background-color: #f6f6f6;
-  padding: 0px 20px;
 }
 
 .list-menu h2 {
@@ -361,6 +481,11 @@ header a:hover {
           animation-name: slideup;
 }
 
+.menu__cards:nth-child(1) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
 .menu__cards:nth-child(2) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -376,17 +501,9 @@ header a:hover {
           animation-delay: 1s;
 }
 
-@-webkit-keyframes slideup {
-  0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
+.menu__cards:nth-child(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 @keyframes slideup {
@@ -476,5 +593,14 @@ header a:hover {
           justify-content: center;
   background-color: #f6f6f6;
   padding-bottom: 85px;
+}
+
+@media screen and (min-width: 600px) {
+  .res__card {
+    margin: 10px 10px 10px 10px;
+  }
+  #res-container {
+    margin-top: 400px;
+  }
 }
 /*# sourceMappingURL=menus.css.map */

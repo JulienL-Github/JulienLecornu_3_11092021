@@ -59,3 +59,65 @@
         color: black;
     }
 }
+
+.menu__cards {
+    @include box-shadow;
+    background-color: $color-white;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 14px;
+    opacity: 0;
+
+    @for $i from 1 to 6 {
+        &:nth-child(#{$i}) {
+            animation-delay: .5s * ($i - 2);
+        }
+    }
+
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: slideup;
+    @keyframes slideup {
+        0% {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .comp {
+        padding: 15px 20px;
+        width: 100%;
+        overflow: hidden;
+
+    
+        h3 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .detail_price{
+            display: flex;
+            justify-content: space-between;
+
+            .detail {
+                overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: calc(100% - 40px);
+            }
+
+            .price {
+                font-weight: 700;
+            }
+        }
+    }
+}

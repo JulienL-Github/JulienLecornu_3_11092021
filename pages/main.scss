@@ -1,13 +1,13 @@
-@import 'utils/_variables.scss';
-@import 'utils/_mixins.scss';
-@import 'base/_fonts.scss';
-@import 'base/box-sizing';
-@import 'components/buttons';
-@import 'components/cards';
-@import 'sections/body.scss';
-@import 'sections/footer.scss';
-@import 'sections/header-home.scss';
-
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../base/_fonts.scss';
+@import '../base/box-sizing';
+@import '../components/buttons';
+@import '../components/cards';
+@import '../components/loading';
+@import '../sections/body.scss';
+@import '../sections/footer.scss';
+@import '../sections/header-home.scss';
 
 #loc {
     padding: $padding-loc;
@@ -81,7 +81,7 @@
 
 }
 
-
+@import '../base/media';
 
 
 

@@ -16,6 +16,7 @@
   font-weight: 500;
   -webkit-transition: 300ms;
   transition: 300ms;
+  min-width: 185px;
 }
 
 .btn:hover {
@@ -131,6 +132,273 @@
   color: black;
 }
 
+.menu__cards {
+  -webkit-box-shadow: 0 5px 5px #bdbdbd;
+          box-shadow: 0 5px 5px #bdbdbd;
+  background-color: #ffff;
+  border-radius: 25px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slideup;
+          animation-name: slideup;
+}
+
+.menu__cards:nth-child(1) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.menu__cards:nth-child(2) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.menu__cards:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.menu__cards:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu__cards:nth-child(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu__cards .comp {
+  padding: 15px 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu__cards .comp h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu__cards .comp .detail_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__cards .comp .detail_price .detail {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 40px);
+}
+
+.menu__cards .comp .detail_price .price {
+  font-weight: 700;
+}
+
+#loading {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*Animation Settings*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+
+#loading .load__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.load__square {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 10px;
+  border-radius: 15px;
+  -webkit-animation: load__square 1s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate;
+          animation: load__square 1s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.load__square:nth-child(1) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.load__square:nth-child(1) {
+  background-color: #9356DC;
+}
+
+.load__square:nth-child(2) {
+  background-color: #FF79DA;
+}
+
+.load__square:nth-child(3) {
+  background-color: #99E2D0;
+}
+
+.load__square:nth-child(2) {
+  -webkit-animation-delay: -0.25s;
+          animation-delay: -0.25s;
+}
+
+.load__square:nth-child(1) {
+  background-color: #9356DC;
+}
+
+.load__square:nth-child(2) {
+  background-color: #FF79DA;
+}
+
+.load__square:nth-child(3) {
+  background-color: #99E2D0;
+}
+
+.load__square:nth-child(3) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.load__square:nth-child(1) {
+  background-color: #9356DC;
+}
+
+.load__square:nth-child(2) {
+  background-color: #FF79DA;
+}
+
+.load__square:nth-child(3) {
+  background-color: #99E2D0;
+}
+
+.load__square:nth-child(4) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.load__square:nth-child(1) {
+  background-color: #9356DC;
+}
+
+.load__square:nth-child(2) {
+  background-color: #FF79DA;
+}
+
+.load__square:nth-child(3) {
+  background-color: #99E2D0;
+}
+
+@-webkit-keyframes load__square {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0);
+            transform: rotate(0deg) scale(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes load__square {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0);
+            transform: rotate(0deg) scale(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
 body {
   margin: 0;
   background-color: #eaeaea;
@@ -140,6 +408,7 @@ body {
 
 body h1 {
   font-family: "Shrikhand";
+  font-size: 2.25em;
 }
 
 body h2 {
@@ -254,20 +523,6 @@ header {
   -webkit-box-shadow: 0 5px 5px #bdbdbd;
           box-shadow: 0 5px 5px #bdbdbd;
   padding-top: 9px;
-}
-
-#menu-ill {
-  width: 100%;
-}
-
-#menu-ill .menu-ill__container {
-  width: 100%;
-}
-
-#menu-ill .menu-ill__container .menu-ill__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
 }
 
 #loc {
@@ -390,5 +645,14 @@ header {
 
 #res .container h2 {
   width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .res__card {
+    margin: 10px 10px 10px 10px;
+  }
+  #res-container {
+    margin-top: 400px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -8,9 +8,20 @@
 @import '../sections/footer.scss';
 @import '../sections/header-menu.scss';
 
+body {
+    background-color: $color-grey-light;
+}
+
+.max-width {
+    max-width: 1080px;
+    margin: auto;
+}
+
 #res-ill {
     width: 100%;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
     z-index: -10;
     .res-ill__container {
         width: 100%;
@@ -18,7 +29,7 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
-            max-height: 500px;
+            /*object-position: 50% 150%;*/
         }
     }
 }
@@ -43,10 +54,11 @@
 
     .menu__container {
         padding-bottom: 45px;
+        width: calc(100% - 40px);
+        margin: auto;
     }
     .list-menu {
         background-color: $color-grey-light;
-        padding: 0px 20px;
         h2 {
             margin-bottom: 10px;
             font-weight: 300;
@@ -58,70 +70,6 @@
             margin-bottom: 14px;
         }
     }
-
-
-
-    .menu__cards {
-        @include box-shadow;
-        background-color: $color-white;
-        border-radius: 25px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        overflow: hidden;
-        margin-bottom: 14px;
-        opacity: 0;
-
-        @for $i from 2 to 5 {
-            &:nth-child(#{$i}) {
-                animation-delay: .5s * ($i - 2);
-            }
-        }
-    
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
-        animation-name: slideup;
-        @keyframes slideup {
-            0% {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .comp {
-            padding: 15px 20px;
-            width: 100%;
-            overflow: hidden;
-
-        
-            h3 {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
-
-            .detail_price{
-                display: flex;
-                justify-content: space-between;
-
-                .detail {
-                    overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                width: calc(100% - 40px);
-                }
-
-                .price {
-                    font-weight: 700;
-                }
-            }
-        }
-
         
         .btn--add {
             @include flex-center-center;
@@ -144,7 +92,6 @@
                 transform:rotate(360deg);
             }
         }
-    }
 
 
 /* CONFIMATION BUTTON */
@@ -155,3 +102,5 @@
     background-color: $color-grey-light;
     padding-bottom: 85px;
 }
+
+@import '../base/media';
