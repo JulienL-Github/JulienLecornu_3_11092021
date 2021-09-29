@@ -239,6 +239,15 @@
   font-weight: 700;
 }
 
+.menu__cards:hover .btn--add {
+  width: 60px;
+}
+
+.menu__cards:hover svg {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 #loading {
   z-index: 1;
   position: fixed;

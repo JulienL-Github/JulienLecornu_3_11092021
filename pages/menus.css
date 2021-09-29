@@ -239,6 +239,15 @@
   font-weight: 700;
 }
 
+.menu__cards:hover .btn--add {
+  width: 60px;
+}
+
+.menu__cards:hover svg {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 body {
   margin: 0;
   background-color: #eaeaea;
@@ -457,101 +466,7 @@ body {
   margin-bottom: 14px;
 }
 
-.menu__cards {
-  -webkit-box-shadow: 0 5px 5px #bdbdbd;
-          box-shadow: 0 5px 5px #bdbdbd;
-  background-color: #ffff;
-  border-radius: 25px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 14px;
-  opacity: 0;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: slideup;
-          animation-name: slideup;
-}
-
-.menu__cards:nth-child(1) {
-  -webkit-animation-delay: -0.5s;
-          animation-delay: -0.5s;
-}
-
-.menu__cards:nth-child(2) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.menu__cards:nth-child(3) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.menu__cards:nth-child(4) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.menu__cards:nth-child(5) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-@keyframes slideup {
-  0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.menu__cards .comp {
-  padding: 15px 20px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.menu__cards .comp h3 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.menu__cards .comp .detail_price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.menu__cards .comp .detail_price .detail {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: calc(100% - 40px);
-}
-
-.menu__cards .comp .detail_price .price {
-  font-weight: 700;
-}
-
-.menu__cards .btn--add {
+.btn--add {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,19 +483,10 @@ body {
   position: relative;
 }
 
-.menu__cards .btn--add svg {
+.btn--add svg {
   fill: #ffff;
   -webkit-transition: .75s;
   transition: .75s;
-}
-
-.menu__cards:hover .btn--add {
-  width: 60px;
-}
-
-.menu__cards:hover svg {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 /* CONFIMATION BUTTON */

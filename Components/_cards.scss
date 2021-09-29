@@ -120,4 +120,13 @@
             }
         }
     }
+    &:hover {
+        .btn--add {
+            width: 60px
+        }
+
+        svg {
+            transform:rotate(360deg);
+        }
+    }
 }
