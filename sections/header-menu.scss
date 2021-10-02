@@ -12,7 +12,7 @@ header {
         position: absolute;
         width: 18px;
         margin-right: 293px;
-        rotate: 180deg;
+        transform: rotate(180deg);
         filter : opacity(40%);
         transition: 150ms;
         &:hover {

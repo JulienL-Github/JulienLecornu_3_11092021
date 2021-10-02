@@ -19,7 +19,8 @@ header a {
   position: absolute;
   width: 18px;
   margin-right: 293px;
-  rotate: 180deg;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-filter: opacity(40%);
           filter: opacity(40%);
   -webkit-transition: 150ms;

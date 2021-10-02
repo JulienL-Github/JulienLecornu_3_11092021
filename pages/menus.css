@@ -33,7 +33,7 @@
   height: 40px;
 }
 
-.res__card--like #gradient-vertical {
+.res__card--like linearGradient {
   --color-stop-1: #FF79DA;
   --color-stop-2: #9356DC;
 }
@@ -47,7 +47,7 @@
 }
 
 .res__card--like g:hover {
-  fill: url(#gradient-vertical);
+  fill: url(#gradient-vertical1);
   stroke: transparent;
   cursor: pointer;
 }
@@ -69,13 +69,30 @@
   max-width: 500px;
 }
 
+.fon__card:hover {
+  cursor: context-menu;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+  -webkit-box-shadow: 0 10px 10px #9b9b9b;
+          box-shadow: 0 10px 10px #9b9b9b;
+}
+
 .res__card {
   position: relative;
   background-color: #ffff;
+  -webkit-box-shadow: 0 5px 5px #bdbdbd;
+          box-shadow: 0 5px 5px #bdbdbd;
   margin: 20px 0px 20px 0px;
   border-radius: 20px;
   width: 100%;
   max-width: 500px;
+}
+
+.res__card:hover {
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+  -webkit-box-shadow: 0 10px 10px #9b9b9b;
+          box-shadow: 0 10px 10px #9b9b9b;
 }
 
 .res__card img {
@@ -377,7 +394,8 @@ header a {
   position: absolute;
   width: 18px;
   margin-right: 293px;
-  rotate: 180deg;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-filter: opacity(40%);
           filter: opacity(40%);
   -webkit-transition: 150ms;
@@ -391,7 +409,7 @@ header a:hover {
 }
 
 body {
-  background-color: #f6f6f6;
+  background-color: #eaeaea;
 }
 
 .max-width {

@@ -8,6 +8,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    &:hover{
+      cursor: wait;
+    }
+
+    
 
     /*Animation Settings*/ 
     animation-fill-mode: forwards;

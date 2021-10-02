@@ -13,8 +13,7 @@
     &:hover{
         cursor: pointer;
         filter: brightness(115%);
-        box-shadow: 0 10px 10px #9b9b9b;
-        
+        box-shadow: 0 10px 10px #9b9b9b; 
     }
 }
 
@@ -24,7 +23,7 @@
     width: 40px;
     height: 40px;
 
-    #gradient-vertical {
+    linearGradient {
         --color-stop-1: #{$color-secondary};
         --color-stop-2: #{$color-primary};
         }
@@ -35,7 +34,7 @@
         stroke-width: 400;
         transition: 150ms;
         &:hover {
-            fill: url(#gradient-vertical);
+            fill: url(#gradient-vertical1);
             stroke:  transparent;
             cursor: pointer;
         }

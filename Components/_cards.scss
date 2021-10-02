@@ -8,16 +8,26 @@
     margin:$margin-fon__card;
     width: 100%;
     max-width: 500px;
+    &:hover{
+        cursor: context-menu;
+        filter: brightness(105%);
+        box-shadow: 0 10px 10px #9b9b9b; 
+    }
 }
 
 
 .res__card {
     position: relative;
     background-color: $color-white;
+    @include box-shadow;
     margin : 20px 0px 20px 0px;
     border-radius: 20px;
     width: 100%;
     max-width: 500px;
+    &:hover{
+        filter: brightness(105%);
+        box-shadow: 0 10px 10px #9b9b9b; 
+    }
     
     img {
         object-fit: cover;
